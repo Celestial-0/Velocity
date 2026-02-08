@@ -68,7 +68,7 @@ const API_DOCS = [
         description: "Fetches the native SOL balance for a given address.",
         params: [
             { name: "address", type: "string", required: true, desc: "Wallet public key" },
-            { name: "network", type: "string", required: false, desc: "mainnet | devnet" }
+            { name: "network", type: "string", required: false, desc: "mainnet | devnet | testnet" }
         ],
         code: `// app/api/solana/balance/route.ts
 const result = await getRpc(network)
@@ -283,7 +283,7 @@ export const HowItWorks = () => {
                                 <div className="space-y-2">
                                     <h4 className="text-sm font-medium">Frontend</h4>
                                     <ul className="text-sm text-muted-foreground space-y-1 list-disc pl-4">
-                                        <li>Next.js 14 App Router</li>
+                                        <li>Next.js 16 App Router</li>
                                         <li>Tailwind CSS + Shadcn UI</li>
                                         <li>Framer Motion</li>
                                         <li>Lucide React Icons</li>
@@ -292,9 +292,9 @@ export const HowItWorks = () => {
                                 <div className="space-y-2">
                                     <h4 className="text-sm font-medium">Blockchain</h4>
                                     <ul className="text-sm text-muted-foreground space-y-1 list-disc pl-4">
-                                        <li>@solana/web3.js</li>
                                         <li>@solana/kit</li>
                                         <li>BIP-39 & ed25519-hd-key</li>
+                                        <li>tweetnacl & bs58</li>
                                         <li>Helius RPC Nodes</li>
                                     </ul>
                                 </div>
